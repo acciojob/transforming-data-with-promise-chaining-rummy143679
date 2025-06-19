@@ -3,7 +3,8 @@ const start = document.getElementById("btn");
 const input = document.getElementById("ip");
 const output = document.getElementById("output");
 start.addEventListener("click", () => {
-	simple(parseInt(input.value)).then(res => {
+	const value = parseInt(input.value)
+	simple(value).then(res => {
 		output.innerHTML = `Result: ${res}`;
 		return multiplay(res);
 	}).then(res => {
@@ -12,6 +13,9 @@ start.addEventListener("click", () => {
 	}).then(res => {
 		output.innerHTML = `Result: ${res}`;
 		return divied(res);
+	}).then(res => {
+		output.innerHTML = `Result: ${res}`;
+		return addTen(res);
 	}).then(res => {
 		output.innerHTML = `Final Result: ${res}`;
 	}).catch(e => console.log(e));
@@ -45,10 +49,10 @@ function divied(val){
 			}, 1000);
 		})
 	}
-function fifth(val){
+function addTen(val){
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
-				resolve(val);
+				resolve(val + 10);
 			}, 1000);
 		})
 	}
