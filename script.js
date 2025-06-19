@@ -16,7 +16,7 @@ start.addEventListener("click", () => {
 		output.innerHTML = `Result: ${res}`;
 		return fifth(res);
 	}).then(res => {
-		output.innerHTML = `Result: ${res}`;
+		output.innerHTML = `Final Result: ${res}`;
 	}).catch(e => console.log(e));
 })
 
