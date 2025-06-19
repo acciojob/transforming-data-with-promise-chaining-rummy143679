@@ -3,7 +3,7 @@ const start = document.getElementById("btn");
 const input = document.getElementById("ip");
 const output = document.getElementById("output");
 start.addEventListener("click", () => {
-	simple(input.value).then(res => {
+	simple(parseInt(input.value)).then(res => {
 		output.innerHTML = `Result: ${res}`;
 		return multiplay(res);
 	}).then(res => {
